@@ -1,9 +1,2 @@
-import React from 'react'
+"use client"
 
-const ProductCard = () => {
-  return (
-    <div>ProductCard</div>
-  )
-}
-
-export default ProductCard
