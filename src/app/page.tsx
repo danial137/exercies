@@ -1,8 +1,8 @@
 import Image from "next/image";
-import ProductCard from "../components/ProductCard";
+import ProductList from "../components/ProductList";
 
 
-const Homepage = async ({ searchParams }: { searhParams: Promise<{ category: string }> }) => {
+const Homepage = async ({ searchParams }: { searchParams: Promise<{ category: string }> }) => {
 
   const category = (await searchParams).category;
 
@@ -11,7 +11,7 @@ const Homepage = async ({ searchParams }: { searhParams: Promise<{ category: str
       <div className="relative aspect-[3/1] mb-12">
         <Image src="/featured.png" alt="Homepage" fill />
       </div>
-      <ProductCard category={category} params="homepage" />
+      <ProductList category={category} params="homepage" />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { z } from "zod";
-export type productTpye = {
+export type ProductType = {
   id: string | number;
   name: string;
   shortDescription: string;
@@ -10,9 +10,9 @@ export type productTpye = {
   images: Record<string, string>;
 };
 
-export type productsType = productTpye[];
+export type ProductsType = ProductType[];
 
-export type CartItemType = productTpye & {
+export type CartItemType = ProductType & {
   quantity: number;
   selectedSize: string;
   selectedColor: string;
@@ -55,4 +55,3 @@ export type CartStoreActionsType = {
   removeFromCart: (id: string | number) => void;
   clearCart: () => void;
 };
-
